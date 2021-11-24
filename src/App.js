@@ -15,10 +15,10 @@ function App() {
 
   return (
     <div className="centered">
-      <div>
+      <div className="padding">
         <h1>Dienos juoko prenumerata</h1>
       </div>
-      <div>
+      <div className="input">
         {status !== 0 ? <InputGroup className="mb-3">
           <FormControl
             placeholder="Email address"
@@ -26,13 +26,14 @@ function App() {
             aria-describedby="basic-addon2"
             onChange = {e => setEmail(e.target.value)}
           />
-          <Button variant="outline-secondary" id="button-addon2" onClick={handleButton}>
+          <Button variant="outline-success" onClick={handleButton}>
             Prenumeruoti
           </Button>
-        </InputGroup> : <h2>Dienos juokas užprenumeruotas!</h2>}
+        </InputGroup> : <h2 className="text">Dienos juokas užprenumeruotas!</h2>}
       </div>
-      {status === 1 ? <p style={{color:"red"}}>šis elektroninis paštas jau gauna dienos juoką</p>: null}
-      {status === 2 ? <p style={{color:"red"}}>netinkamas elektroninis paštas</p>: null}
+      {status === 1 ? <p className="error" style={{color:"red"}}>šis elektroninis paštas jau gauna dienos juoką</p>: null}
+      {status === 2 ? <p className="error" style={{color:"red"}}>netinkamas elektroninis paštas</p>: null}
+      {status === -2 ? <p className="error" style={{color:"red"}}>techninė klaida</p>: null}
     </div>
   );
 }
