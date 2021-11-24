@@ -1,5 +1,5 @@
 .centered {
-  height: 100vh; /* Magic here */
+  height: 40em;
   display: flex;
   justify-content: center;
   align-items: center;

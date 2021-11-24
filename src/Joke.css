@@ -1,0 +1,8 @@
+.jokeButton{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 1%;
+    padding-top: 1%;
+}
