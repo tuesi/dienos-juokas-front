@@ -1,8 +1,12 @@
 .jokeButton{
     display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
     padding-left: 1%;
     padding-top: 1%;
+}
+
+.botButton{
+    margin-left: 38%;
 }

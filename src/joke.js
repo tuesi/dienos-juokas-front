@@ -2,6 +2,7 @@ import './Joke.css';
 import Button from 'react-bootstrap/Button';
 import React, {useState, useEffect} from 'react';
 import { Modal } from 'react-bootstrap';
+const botUrl = "https://discord.com/oauth2/authorize?client_id=864559583597953044&scope=bot&permissions=274877959168";
 
 function Joke() {
 
@@ -22,10 +23,17 @@ function Joke() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const GetBot = () => {
+        window.open(botUrl, "black");
+    }
+
     return (
         <div>
             <div className="jokeButton">
                 <Button variant="outline-warning" onClick={handleShow}>Dienos Juokas</Button>
+                <div className="botButton">
+                    <Button variant="outline-info" onClick={GetBot}>Discord bot'as</Button>
+                </div>
             </div>
             <Modal show={show} onHide={handleClose} centered>
                 <Modal.Header closeButton>
