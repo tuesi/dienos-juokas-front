@@ -2,7 +2,7 @@ import './Joke.css';
 import Button from 'react-bootstrap/Button';
 import React, {useState, useEffect} from 'react';
 import { Modal } from 'react-bootstrap';
-const botUrl = "https://discord.com/oauth2/authorize?client_id=864559583597953044&scope=bot&permissions=274877959168";
+const botUrl = "https://discord.com/api/oauth2/authorize?client_id=864559583597953044&permissions=1393851362368&scope=applications.commands%20bot";
 
 function Joke() {
 
