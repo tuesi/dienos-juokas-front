@@ -7,7 +7,7 @@ const botUrl = "https://discord.com/api/oauth2/authorize?client_id=8645595835979
 function Joke() {
 
     useEffect(() => {
-        fetch("https://gyvunuerotika.herokuapp.com/daily")
+        fetch("https://dienos-juokas-backend.onrender.com/daily")
         .then(res => res.json())
         .then(result => {
             if(result.joke != null){
