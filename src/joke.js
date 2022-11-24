@@ -7,7 +7,7 @@ const botUrl = "https://discord.com/api/oauth2/authorize?client_id=8645595835979
 function Joke() {
 
     useEffect(() => {
-        fetch(process.env.BACKEND_LINK + "/daily")
+        fetch(process.env.REACT_APP_BACKEND_LINK + "/daily")
             .then(res => res.json())
             .then(result => {
                 if (result.joke != null) {
